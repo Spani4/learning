@@ -149,5 +149,6 @@ class Magnifier {
 }
 
 window.addEventListener('load', () => {
+	//call: Magnifier.initiate(img-elem, scale (optional), class-name(optional));
 	Magnifier.initiate(document.querySelector('img'), 2, 'class');
 });
