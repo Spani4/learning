@@ -1,0 +1,26 @@
+.go-to-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 80px;
+  bottom: 50px;
+  z-index: 10000;
+  font-size: 45px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  background-color: #11d;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.go-to-top:hover {
+  -moz-box-shadow: 0 0 5px 2px #000000;
+  -webkit-box-shadow: 0 0 5px 2px #000000;
+  box-shadow: 0 0 5px 2px #000000;
+}
