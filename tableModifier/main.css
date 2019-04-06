@@ -1,0 +1,30 @@
+/*FLEX-BOX*/
+* {
+  box-sizing: border-box;
+}
+table,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td,
+th {
+  text-align: left;
+  text-indent: 5px;
+  padding: 3px 10px;
+}
+th {
+  background-color: #ddd;
+  cursor: default;
+}
+.sorted-straight::after {
+  content: ' \2191';
+  font-weight: normal;
+  text-align: right;
+}
+.sorted-reverse::after {
+  content: ' \2193';
+  font-weight: normal;
+  text-align: right;
+}
