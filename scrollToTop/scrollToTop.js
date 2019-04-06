@@ -19,7 +19,6 @@ class ScrollToTop {
 		elem.innerHTML = '&#x21ea;';
 		elem.style.display = 'none';
 
-
 		elem.addEventListener('click', function() {
 			document.documentElement.scrollTop = 0 + 'px';
 		});
@@ -32,8 +31,6 @@ class ScrollToTop {
 				elem.style.display = 'none';
 			}
 		});
-
-
 	}
 
 	getElem() {
