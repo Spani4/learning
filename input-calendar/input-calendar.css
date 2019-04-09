@@ -1,0 +1,66 @@
+.input-calendar {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  min-width: 175px;
+  max-width: 250px;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+.input-calendar .nav {
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+  font-size: 15px;
+  text-align: center;
+}
+.input-calendar .nav a {
+  padding: 0 5px;
+  display: block;
+  cursor: pointer;
+}
+.input-calendar .nav a.prev {
+  float: left;
+}
+.input-calendar .nav a.next {
+  float: right;
+}
+.input-calendar table {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 13px;
+}
+.input-calendar table td,
+.input-calendar table th {
+  padding: 0;
+  width: 14%;
+  max-width: 26px;
+  border: 1px solid black;
+}
+.input-calendar table td:first-child,
+.input-calendar table th:first-child,
+.input-calendar table td:last-child,
+.input-calendar table th:last-child {
+  border-width: 1px 0;
+}
+.input-calendar table td {
+  cursor: pointer;
+}
+.input-calendar table td:hover {
+  outline: 3px ridge grey;
+  outline-offset: -3px;
+}
+.input-calendar table th {
+  background-color: #ddd;
+  cursor: default;
+}
+.input-calendar table .half-opacity {
+  opacity: .5;
+}
+.input-calendar table .today {
+  color: #cc0000;
+  font-weight: bold;
+}
