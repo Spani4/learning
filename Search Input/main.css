@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+input {
+  width: 400px;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+}
+div.text {
+  width: 400px;
+  padding: 10px;
+  text-align: justify;
+  border: 1px solid brown;
+}
