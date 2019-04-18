@@ -18,7 +18,7 @@ class PageSearch {
     });
 
     input.addEventListener('keyup', () => {
-      let str = input.value.replace(/[^A-Za-zА-Яа-яЁё -]/gi, '');
+      let str = input.value.replace(/[^A-Za-zА-Яа-яЁё0-9 -]/gi, '');
 
       if ( str ) {
         let reg = new RegExp('(' + str + ')', 'gi');
@@ -47,6 +47,10 @@ class PageSearch {
       }
     }
   }
+
+  static init(input) {
+    new PageSearch(input);
+  }
 }
 
-let searchInput = new PageSearch(document.querySelector('input'));
+PageSearch.init(document.querySelector('input'));
