@@ -1,0 +1,49 @@
+// @import "lib";
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.drop-menu {
+  box-sizing: border-box;
+  display: inline-block;
+
+  @bg-color: olive;
+  @a-color: yellow;
+  @text-shadow-color: orange;
+
+  background-color: @bg-color;
+  font-size: 20px;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: @a-color;
+    text-shadow: 0 0 5px @text-shadow-color;
+    padding: 5px 10px;
+
+    &:hover {
+      background-color: lighten(@bg-color, 10%);
+    }
+  }
+
+  .drop-button {
+    a {
+
+    }
+  }
+
+  .drop-content {
+    position: absolute;
+    background-color: inherit;
+
+    a {
+
+    }
+  }
+
+
+}

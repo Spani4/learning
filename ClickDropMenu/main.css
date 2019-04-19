@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+.drop-menu {
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #808000;
+  font-size: 20px;
+}
+.drop-menu a {
+  display: block;
+  text-decoration: none;
+  color: #ffff00;
+  text-shadow: 0 0 5px #ffa500;
+  padding: 5px 10px;
+}
+.drop-menu a:hover {
+  background-color: #b3b300;
+}
+.drop-menu .drop-content {
+  position: absolute;
+  background-color: inherit;
+}
