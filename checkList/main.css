@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+#checklist {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#checklist .new-task textarea {
+  width: 100%;
+  height: 50px;
+  resize: vertical;
+  margin: 0;
+}
+#checklist .new-task button {
+  width: 100%;
+  height: 25px;
+  margin: 0;
+}
+#checklist .task-list {
+  margin-top: 10px;
+  border: 1px solid grey;
+}
+#checklist .task-list .task {
+  position: relative;
+  border: 1px solid grey;
+  padding: 5px;
+}
+#checklist .task-list .task p.text {
+  width: 80%;
+}
+#checklist .task-list .task button {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+#checklist .task-list .task.done p {
+  color: grey;
+  text-decoration: line-through;
+}
+#checklist .task-list .task.done button {
+  visibility: hidden;
+}
+#checklist > .prototype {
+  display: none;
+}

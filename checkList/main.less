@@ -1,0 +1,67 @@
+// @import "lib";
+* {
+  box-sizing: border-box;
+}
+
+
+#checklist {
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+
+  .new-task {
+    textarea {
+      width: 100%;
+      height: 50px;
+      resize: vertical;
+      margin: 0;
+    }
+
+    button {
+      width: 100%;
+      height: 25px;
+      margin: 0;
+    }
+  }
+
+  .task-list {
+    margin-top: 10px;
+    border: 1px solid grey;
+
+    .task {
+      position: relative;
+      border: 1px solid grey;
+      padding: 5px;
+
+
+      p.text {
+        width: 80%;
+      }
+
+      button {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        right: 0;
+        top: 0;
+      }
+
+      &.done {
+        p {
+          color: grey;
+          text-decoration: line-through;;
+        }
+
+        button {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  & > .prototype {
+    display: none;
+  }
+}
