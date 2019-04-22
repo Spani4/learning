@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+.tooltip {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 2px 5px;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 1px #bbb;
+  cursor: default;
+}
