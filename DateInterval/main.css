@@ -1,0 +1,46 @@
+#interval-calendar {
+  min-width: 250px;
+  width: 350px;
+}
+#interval-calendar * {
+  box-sizing: border-box;
+}
+#interval-calendar .nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #555;
+  color: #ddd;
+}
+#interval-calendar .nav a {
+  cursor: pointer;
+  padding: 0 5px;
+}
+#interval-calendar table {
+  width: 100%;
+  text-align: center;
+}
+#interval-calendar table tr th {
+  background-color: #bbb;
+}
+#interval-calendar table tr:nth-child(even) {
+  background-color: #eee;
+}
+#interval-calendar table tr:nth-child(odd) {
+  background-color: #ddd;
+}
+#interval-calendar table tr td {
+  cursor: pointer;
+}
+#interval-calendar table .half-opacity {
+  opacity: .4;
+}
+#interval-calendar table .today {
+  font-weight: bold;
+  outline: 2px ridge grey;
+}
+#interval-calendar table.interval tr td:last-child {
+  font-weight: bold;
+}
+#interval-calendar table.interval tr td {
+  width: 50%;
+}

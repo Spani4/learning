@@ -1,0 +1,66 @@
+// @import "lib";
+
+#interval-calendar {
+
+  min-width: 250px;
+  width: 350px;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #555;
+    color: #ddd;
+
+    a {
+      cursor: pointer;
+      padding: 0 5px;
+    }
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+
+    tr {
+      th {
+        background-color: #bbb;
+      }
+      &:nth-child(even) {
+        background-color: #eee;
+      }
+      &:nth-child(odd) {
+        background-color: #ddd;
+      }
+
+      td {
+        cursor: pointer;
+      }
+    }
+
+    .half-opacity {
+      opacity: .4;
+    }
+
+    .today {
+      font-weight: bold;
+      outline: 2px ridge grey;
+    }
+  }
+
+  table.interval {
+    tr {
+      td:last-child {
+        font-weight: bold;
+      }
+
+      td {
+        width: 50%;
+      }
+    }
+  }
+}
