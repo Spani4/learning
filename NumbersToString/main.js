@@ -12,7 +12,6 @@ class NumbersToString {
       units: ['','один','два','три','четыре','пять','шесть','семь','восемь','девять'],
     }
 
-    console.log(this._keywords);
     this._init(input, textField);
   }
 
