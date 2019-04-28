@@ -1,0 +1,16 @@
+code {
+  white-space: pre-wrap;
+  tab-size: 2;
+}
+span.keyword {
+  color: blue;
+}
+span.number {
+  color: red;
+}
+span.string {
+  color: green;
+}
+span.comment {
+  color: #999;
+}
