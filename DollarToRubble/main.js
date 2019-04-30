@@ -22,7 +22,6 @@ class DollarToRubble {
   }
 
   _convert(str, rate) {
-    console.log(Math.round(rate * str * 100) / 100);
     return (Math.round(rate * str * 100) / 100).toFixed(2);
   }
 
