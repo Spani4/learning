@@ -1,0 +1,83 @@
+.dot-surrounding-field {
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #888;
+}
+.dot-surrounding-field * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.dot-surrounding-field .visible-grid {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+}
+.dot-surrounding-field .visible-grid .row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+}
+.dot-surrounding-field .visible-grid .row .cell {
+  outline: 1px solid #bbb;
+}
+.dot-surrounding-field .dot-spot-grid {
+  position: relative;
+}
+.dot-surrounding-field .dot-spot-grid .dot-spot-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+}
+.dot-surrounding-field .dot-spot-grid .dot-spot-row .dot-spot-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot-surrounding-field .dot-spot-grid .dot-spot-row .dot-spot-cell .spot {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+}
+.dot-surrounding-field .dot-spot-grid .dot-spot-row .dot-spot-cell .empty {
+  opacity: .4;
+}
+.dot-surrounding-field .dot-spot-grid .dot-spot-row .dot-spot-cell .occupied {
+  opacity: 1;
+}
+.dot-surrounding-field .dot-spot-grid .dot-spot-row .dot-spot-cell .black {
+  background-color: black;
+}
+.dot-surrounding-field .dot-spot-grid .dot-spot-row .dot-spot-cell .white {
+  background-color: white;
+}
+.dot-surrounding-field .dot-spot-grid .dot-spot-row .dot-spot-cell .captured {
+  transform: scale(0.8);
+  box-shadow: inset 0 0 2px 2px grey;
+}
+.dot-surrounding-field .score-panel {
+  text-align: center;
+  padding: 0 0 10px;
+  cursor: default;
+}
+.dot-surrounding-field .score-panel p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px;
+}
+.dot-surrounding-field .score-panel .new-game-link {
+  cursor: pointer;
+  padding: 2px 5px;
+  font-size: 18px;
+  border: 1px solid #bbb;
+  box-shadow: 0 0 2px 0px black;
+}
+.dot-surrounding-field .score-panel .new-game-link:hover {
+  text-shadow: 0 0 1px #bbb;
+}
+.dot-surrounding-field .score-panel .winner {
+  text-shadow: 0 0 5px white;
+  margin: 5px;
+}

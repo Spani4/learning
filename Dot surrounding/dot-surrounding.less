@@ -1,0 +1,105 @@
+.dot-surrounding-field {
+
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #888;
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  .visible-grid {
+    position: absolute;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+
+
+    .row {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: stretch;
+
+      .cell {
+
+        outline: 1px solid #bbb;
+      }
+    }
+  }
+
+  .dot-spot-grid {
+    position: relative;
+
+    .dot-spot-row {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: stretch;
+
+      .dot-spot-cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // &:hover .empty {
+        //   border: 2px solid #eee;
+        // }
+
+        .spot {
+          width: 60%;
+          height: 60%;
+          border-radius: 50%;
+        }
+        .empty {
+          opacity: .4;
+        }
+        .occupied {
+          opacity: 1;
+        }
+        .black {
+          background-color: black;
+        }
+        .white {
+          background-color: white;
+        }
+        .captured {
+          transform: scale(.8);
+          box-shadow: inset 0 0 2px 2px grey;
+        }
+      }
+    }
+  }
+
+  .score-panel {
+    text-align: center;
+    padding:  0 0 10px;
+    cursor: default;
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 5px;
+
+    }
+
+    .new-game-link {
+      cursor: pointer;
+      padding: 2px 5px;
+      font-size: 18px;
+
+      border: 1px solid #bbb;
+      box-shadow: 0 0 2px 0px black;
+
+      &:hover {
+        text-shadow: 0 0 1px #bbb;
+      }
+    }
+
+    .winner {
+      text-shadow: 0 0 5px white;
+      margin: 5px;
+    }
+  }
+}
