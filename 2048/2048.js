@@ -118,6 +118,7 @@ class Game2048 {
       let key = e.keyCode;
 
       if ( key >= 37 && key <= 40 ) {
+        e.preventDefault();
         this.handleArrowPress(key);
       }
 
