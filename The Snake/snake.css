@@ -1,0 +1,163 @@
+#snake-game {
+  text-align: center;
+  box-sizing: border-box;
+}
+#snake-game * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#snake-game .row {
+  display: flex;
+  flex-direction: row;
+}
+#snake-game .col {
+  display: flex;
+  flex-direction: column;
+}
+#snake-game button {
+  width: 60%;
+  margin: 0 auto;
+  padding: 6px;
+  font-family: inherit;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 0;
+  border-radius: 20px;
+  background-color: #666600;
+  color: #f9f2ec;
+  cursor: pointer;
+  transition: all .2s;
+}
+#snake-game button:hover {
+  box-shadow: 0 0 10px 0 #666600;
+  transform: scale(1.05);
+}
+#snake-game button:focus {
+  outline: 0;
+}
+#snake-game label.custom-checkbox .checkbox {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: left;
+  cursor: pointer;
+  background-color: #f9f2ec;
+}
+#snake-game label.custom-checkbox .switcher {
+  width: 50%;
+  height: 100%;
+  background-color: #d2a679;
+  border-radius: 3px;
+  left: 0;
+  position: relative;
+  transition: all .2s;
+}
+#snake-game label.custom-checkbox input {
+  display: none;
+}
+#snake-game label.custom-checkbox input[type="checkbox"]:checked + .switcher {
+  background-color: #666600;
+  left: 50%;
+}
+#snake-game .game-menu {
+  justify-content: space-around;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background: linear-gradient(to bottom, #f9f2ec 0%, #d2a679 60%, #f9f2ec 100%);
+  color: #666600;
+  border: 7px groove #666600;
+}
+#snake-game .game-menu h1 {
+  font-size: 100px;
+  font-weight: bold;
+  text-shadow: 0 3px 3px black;
+}
+#snake-game .game-menu .options {
+  margin: 0 5%;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 25px;
+}
+#snake-game .game-menu .options span:first-child {
+  width: 30%;
+}
+#snake-game .game-menu .options span:last-child {
+  width: 10%;
+}
+#snake-game .game-menu input {
+  cursor: pointer;
+  max-width: 50%;
+}
+#snake-game .game-field {
+  position: relative;
+  text-align: center;
+  background-color: #f9f2ec;
+  width: 600px;
+  margin: 0 auto;
+  outline: 3px ridge #006600;
+}
+#snake-game .game-field .score {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  font-size: 40px;
+  color: #edd7c5;
+}
+#snake-game .game-field .score .indicator {
+  font-size: 50px;
+  color: #af6e37;
+  opacity: .2;
+  transition: all .3s linear;
+  padding: 10px;
+}
+#snake-game .game-field .cell {
+  position: relative;
+}
+#snake-game .game-field .snake {
+  background-color: #006600;
+  border-radius: 20%;
+  border: 1px solid #666600;
+  transition: transform .2 linear;
+}
+#snake-game .game-field .mouse {
+  background-color: #d2a679;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 0 #006600;
+  animation: mouse .8s infinite;
+}
+#snake-game .game-field .hit {
+  background-color: #ff0000;
+}
+#snake-game .game-field .game-over {
+  position: absolute;
+  justify-content: space-around;
+  opacity: .9;
+  box-shadow: 0 0 30px 5px grey;
+  top: 0;
+  margin: 0 auto;
+  font-size: 75px;
+  font-weight: bold;
+  text-shadow: 0 3px 3px black;
+  background: linear-gradient(to bottom, #f9f2ec 0%, #d2a679 60%, #f9f2ec 100%);
+  border: 3px groove #666600;
+  z-index: 10;
+}
+@keyframes mouse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
