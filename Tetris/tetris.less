@@ -1,0 +1,294 @@
+ #tetris-game {
+
+  @game-size: 410px;
+  @main-padding: 5px;
+
+  @color-1: #ffffff;
+  @color-2: #76a2f4;
+  @color-3: #1761ec;
+  @color-4: #0c3b92;
+  @color-5: #0a1a38;
+
+  @font: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  width: @game-size;
+  height: @game-size;
+
+  margin: 0;
+  padding: @main-padding;
+  padding-right: 0;
+
+  outline: 2px solid @color-5;
+  font-family: @font;
+  background: repeating-linear-gradient(to bottom, @color-4 1px, @color-4 3px, @color-2 3px, @color-2  4px);
+
+  & * {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+  }
+
+  h1, p {
+    text-align: center;
+    text-shadow: 0 2px 3px @color-1;
+  }
+  h1 {
+    font-size: @game-size / 12;
+  }
+  p {
+    padding: @game-size/40;
+    font-size: @game-size / 13;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
+  .hidden {
+    display: none;
+  }
+
+  button {
+    display: block;
+
+    width: 100%;
+
+    margin: auto;
+    padding: @game-size/70;
+
+    outline: 0;
+    border: 3px outset @color-2;
+    background: linear-gradient(@color-2, darken(@color-2, 10%));
+
+    font-size: @game-size / 30;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:active {
+      border: 3px inset @color-2;
+      background: linear-gradient(@color-2, darken(@color-2, 15%));
+
+    }
+    &:focus {
+      outline: 0;
+    }
+
+    &.help-button {
+      height: @game-size / 20;
+      padding: 0;
+      font-weight: normal;
+    }
+  }
+
+  .cell {
+    display: inline-block;
+
+    width: (@game-size - @main-padding * 2) / 20;
+    height: (@game-size - @main-padding * 2) / 20;
+
+  }
+
+  .figure-cell {
+    border: 1px solid @color-4;
+    background-color: @color-1;
+    box-shadow: inset 0 0 3px 0 black;
+  }
+
+  .modal-game-over {
+    width: 80%;
+    position: absolute;
+
+    align-self: center;
+    margin: 40% auto 0 auto;
+    padding: 20% 5%;
+
+    text-align: center;
+    font-size: @game-size / 9;
+    line-height: @game-size / 5;
+    font-weight: bold;
+    text-shadow: 0 2px 2px white;
+    box-shadow: 0 0 10px 4px black;
+
+    background: repeating-linear-gradient(to bottom, @color-4 1px, @color-4 3px, @color-2 3px, @color-2  4px);
+    opacity: .9;
+    outline: 2px solid @color-5;
+
+    transition: transform .5s;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  .modal-pause {
+    width: 80%;
+    position: absolute;
+
+    align-self: center;
+    margin: 20% auto 0 auto;
+    padding: 5%;
+
+    text-align: center;
+    font-size: @game-size / 12;
+    line-height: @game-size / 8;
+    font-weight: bold;
+    text-shadow: 0 2px 2px white;
+    box-shadow: 0 0 10px 4px black;
+
+    background: repeating-linear-gradient(to bottom, @color-4 1px, @color-4 3px, @color-2 3px, @color-2  4px);
+    opacity: .9;
+    outline: 2px solid @color-5;
+  }
+
+  .modal-help {
+    width: 80%;
+    position: absolute;
+
+    align-self: center;
+    margin: 40% auto 0 auto;
+    padding: 3%;
+
+    text-align: center;
+    font-size: @game-size / 12;
+    line-height: @game-size / 8;
+    font-weight: bold;
+    text-shadow: 0 2px 2px white;
+    box-shadow: 0 0 10px 4px black;
+
+    background: @color-1;
+    opacity: .9;
+    outline: 2px solid @color-5;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: @game-size / 37;
+      line-height: @game-size / 22;
+      vertical-align: middle;
+      font-weight: normal;
+
+      td {
+        padding: 3px;
+      }
+
+      tr:not(:last-child) td {
+        border-bottom: 1px solid darken(@color-1, 10%);
+      }
+
+    }
+
+  }
+
+  .pit {
+
+    position: relative;
+
+    .col;
+    width: (@game-size - @main-padding * 2) / 2;
+    height: (@game-size - @main-padding * 2);
+
+    outline: 2px solid @color-5;
+    background: linear-gradient(@color-2, darken(@color-2, 20%));
+
+    .ground {
+      background-color: @color-1;
+      box-shadow: inset 0 0 10px 0px black;
+    }
+
+    .transition {
+      transition: .3s;
+    }
+  }
+
+  .dashboard {
+
+    .col;
+    justify-content: space-around;
+    width: (@game-size - @main-padding) / 2;
+    height: (@game-size - @main-padding);
+
+    .score-panel {
+
+      .controls {
+        .col;
+        width: 70%;
+        margin: @game-size/100 auto @game-size/40;
+        align-items: center;
+        border: 1px ridge @color-5;
+        background: linear-gradient(@color-2, darken(@color-2, 10%));
+
+      }
+
+      .insane-mode {
+
+        .row;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0 @game-size/60;
+
+        border: 3px outset @color-2;
+
+        font-size: @game-size/30;
+        cursor: pointer;
+
+        input {
+          display: none;
+
+          &:checked + .insane-mode-indicator {
+            background: @color-4;
+            box-shadow: 0 0 3px 1px @color-1;
+
+            animation: insane .5s infinite;
+          }
+
+          &:checked ~ .insane-mode-text {
+            font-weight: bold;
+          }
+        }
+        .insane-mode-indicator {
+          width: @game-size / 40;
+          height: @game-size / 40;
+          border-radius: 50%;
+          background-color: transparent;
+          box-shadow: 0 0 1px 0px @color-1;
+
+        }
+      }
+    }
+
+    .next-figure-panel {
+
+      .next-figure-indicator {
+
+        padding: @game-size / 20;
+
+        .col;
+        justify-content: center;
+
+        .row {
+          justify-content: center;
+
+          .cell {
+            outline: none;
+          }
+        }
+      }
+
+    }
+  }
+
+  @keyframes insane{
+    0% { transform: scale(1);}
+    50% { transform: scale(.8);}
+    100% { transform: scale(1);}
+  }
+ }
