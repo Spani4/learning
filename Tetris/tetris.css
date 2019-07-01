@@ -148,8 +148,9 @@
   background: linear-gradient(#76a2f4, #1862ec);
 }
 #tetris-game .pit .ground {
+  border: 1px solid #0c3b92;
   background-color: #ffffff;
-  box-shadow: inset 0 0 10px 0px black;
+  box-shadow: inset 0 0 3px 0 black;
 }
 #tetris-game .pit .transition {
   transition: .3s;
@@ -167,7 +168,7 @@
   width: 70%;
   margin: 4.1px auto 10.25px;
   align-items: center;
-  border: 3px ridge #0a1a38;
+  border: 1px ridge #0a1a38;
   background: linear-gradient(#76a2f4, #4782f0);
 }
 #tetris-game .dashboard .score-panel .insane-mode {
@@ -223,3 +224,5 @@
     transform: scale(1);
   }
 }
+
+/*# sourceMappingURL=tetris.css.map */
