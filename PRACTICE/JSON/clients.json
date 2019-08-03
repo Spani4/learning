@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Яндекс",
+    "image": "client__yandex.png",
+    "description": "Поисковая система Яндекс. Да, это мы :)",
+    "link": "https://yandex.ru"
+  },
+  {
+    "name": "Google",
+    "image": "client__google.png",
+    "description": "И это тоже мы!",
+    "link": "https://google.com"
+  },
+  {
+    "name": "Facebook",
+    "image": "client__facebook.png",
+    "description": "Для нашего друга Цукерберга",
+    "link": "https://facebook.com"
+  },
+  {
+    "name": "mail.ru",
+    "image": "client__mail.png",
+    "description": "Почтовый сервис",
+    "link": "https://mail.ru"
+  },
+  {
+    "name": "Apple",
+    "image": "client__apple.png",
+    "description": "Сайт компании Apple",
+    "link": "https://apple.com/ru/"
+  },
+  {
+    "name": "Nvidia",
+    "image": "client__nvidia.png",
+    "description": "Сайт для крупнейшего производителя видеокарт",
+    "link": "https://nvidia.com"
+  },
+  {
+    "name": "YouTube",
+    "image": "client__youtube.png",
+    "description": "Известнейший видеохостинг. Тоже мы!",
+    "link": "https://youtube.com"
+  },
+  {
+    "name": "LostFilm",
+    "image": "client__lostfilm.png",
+    "description": "Лучшие сериалы",
+    "link": "https://lostfilm.tv"
+  },
+  {
+    "name": "W3Schools",
+    "image": "client__w3school.png",
+    "description": "Онлайн школа",
+    "link": "https://w3schools.com"
+  },
+  {
+    "name": "AliExpress",
+    "image": "client__aliexpress.png",
+    "description": "Всякая всячина",
+    "link": "https://aliexpress.com"
+  },
+  {
+    "name": "Сбербанк",
+    "image": "client__sberbank.png",
+    "description": "Конечно же ;)",
+    "link": "https://sberbank.ru"
+  },
+  {
+    "name": "Почта России",
+    "image": "client__pochta.png",
+    "description": "Наша гордость!",
+    "link": "https://pochta.ru"
+  }
+]
